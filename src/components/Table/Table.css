@@ -1,0 +1,20 @@
+table {
+  border-collapse: collapse;
+}
+
+th {
+  border-bottom: 1px solid;
+}
+
+table, th, td {
+  padding: 0.2rem;
+}
+
+td {
+  border-bottom: 1px solid;
+  font-size: 0.9rem;
+  max-width: 8rem;
+  text-align: center;
+  word-wrap: break-word;
+}
+
