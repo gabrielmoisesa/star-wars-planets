@@ -1,4 +1,4 @@
-import NameFilter from '../NameFilter/NameFilter';
+import NameFilter from './NameFilter/NameFilter';
 
 function Filters() {
   return (
