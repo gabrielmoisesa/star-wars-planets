@@ -1,11 +1,10 @@
-import useFetch from '../../hooks/useFetch';
+import { useContext } from 'react';
 import { PlanetType } from '../../types';
 import './Table.css';
+import PlanetsContext from '../../context/PlanetsContext';
 
 function Table() {
-  const { data, loading } = useFetch('https://swapi.dev/api/planets');
-
-  console.log(data);
+  const { data, loading } = useContext(PlanetsContext);
 
   return loading ? <h2>Loading...</h2> : (
     <table>

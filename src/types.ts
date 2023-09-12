@@ -13,3 +13,13 @@ export type PlanetType = {
   edited: string;
   url: string;
 };
+
+export type PlanetsContextType = {
+  data: Array<PlanetType>;
+  loading: boolean;
+  error: null | unknown;
+};
+
+export type ProviderProps = {
+  children: React.ReactNode;
+};
