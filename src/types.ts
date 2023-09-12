@@ -14,10 +14,15 @@ export type PlanetType = {
   url: string;
 };
 
+export type ErrorType = {
+  message: string;
+};
+
 export type PlanetsContextType = {
   data: Array<PlanetType>;
   loading: boolean;
-  error: null | unknown;
+  error: null | unknown | ErrorType;
+  filterName: (name: string) => void;
 };
 
 export type ProviderProps = {

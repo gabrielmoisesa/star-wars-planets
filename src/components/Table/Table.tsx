@@ -6,7 +6,7 @@ import PlanetsContext from '../../context/PlanetsContext';
 function Table() {
   const { data, loading } = useContext(PlanetsContext);
 
-  return loading ? <h2>Loading...</h2> : (
+  return (
     <table>
       <thead>
         <tr>
@@ -26,7 +26,7 @@ function Table() {
         </tr>
       </thead>
       <tbody>
-        {data.map((planet: PlanetType) => (
+        {loading ? <tr><td>Loading...</td></tr> : data.map((planet: PlanetType) => (
           <tr key={ planet.name }>
             <td>{planet.name}</td>
             <td>{planet.rotation_period}</td>
