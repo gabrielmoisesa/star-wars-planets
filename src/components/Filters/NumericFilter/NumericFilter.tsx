@@ -2,16 +2,30 @@ import { useContext } from 'react';
 import PlanetsContext from '../../../context/PlanetsContext';
 
 function NumericFilter() {
-  const { saveFilter } = useContext(PlanetsContext);
+  const { saveFilter, filters } = useContext(PlanetsContext);
+
+  const columns = [
+    'population',
+    'orbital_period',
+    'diameter',
+    'rotation_period',
+    'surface_water',
+  ];
+
+  const filteredColumns = columns.filter(
+    (column) => !filters.some((filter) => filter.column === column),
+  );
 
   const handleSubmit: (event: React.SyntheticEvent<HTMLFormElement>) => void = (
     event,
   ) => {
     event.preventDefault();
 
-    const column = (event.target as HTMLFormElement).column.value;
-    const comparison = (event.target as HTMLFormElement).comparison.value;
-    const value = Number((event.target as HTMLFormElement).value.value);
+    const target = event.target as HTMLFormElement;
+
+    const column = target.column.value;
+    const comparison = target.comparison.value;
+    const value = Number(target.value.value);
 
     saveFilter(column, comparison, value);
   };
@@ -21,11 +35,11 @@ function NumericFilter() {
       <label>
         Column
         <select name="column" data-testid="column-filter">
-          <option value="population">population</option>
-          <option value="orbital_period">orbital_period</option>
-          <option value="diameter">diameter</option>
-          <option value="rotation_period">rotation_period</option>
-          <option value="surface_water">surface_water</option>
+          {filteredColumns.map((column) => (
+            <option key={ column } value={ column }>
+              {column}
+            </option>
+          ))}
         </select>
       </label>
       <label>
