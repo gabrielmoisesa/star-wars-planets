@@ -23,6 +23,7 @@ export type PlanetsContextType = {
   loading: boolean;
   error: null | unknown | ErrorType;
   filterName: (name: string) => void;
+  filterNumeric: (column: string, comparison: string, value: number) => void;
 };
 
 export type ProviderProps = {

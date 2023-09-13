@@ -15,11 +15,30 @@ function PlanetsProvider({ children }: ProviderProps) {
     data.filter((planet: PlanetType) => planet.name.includes(name)),
   );
 
+  const filterNumeric = (column: string, comparison: string, value: number) => {
+    switch (comparison) {
+      case 'maior que':
+        setFilteredData(filteredData.filter((planet) => planet[column] > value));
+        break;
+      case 'menor que':
+        setFilteredData(filteredData.filter((planet) => planet[column] < value));
+        break;
+      case 'igual a':
+        setFilteredData(
+          filteredData.filter((planet) => planet[column] === String(value)),
+        );
+        break;
+      default:
+        throw new Error('Invalid comparison operator');
+    }
+  };
+
   const PlanetsData = {
     data: filteredData,
     loading,
     error,
     filterName,
+    filterNumeric,
   };
 
   return (
