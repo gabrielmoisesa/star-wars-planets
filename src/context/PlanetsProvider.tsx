@@ -1,27 +1,22 @@
 import { useEffect, useState } from 'react';
-import { PlanetType, ProviderProps } from '../types';
+import { FilterType, PlanetType, ProviderProps } from '../types';
 import useFetch from '../hooks/useFetch';
 import PlanetsContext from './PlanetsContext';
 
 function PlanetsProvider({ children }: ProviderProps) {
   const { data, loading, error } = useFetch('https://swapi.dev/api/planets');
   const [filteredData, setFilteredData] = useState<PlanetType[]>(data);
-  const [filterText, setFilterText] = useState('');
+  const [filters, setFilters] = useState<FilterType[]>([]);
 
   useEffect(() => {
     setFilteredData(data);
   }, [data]);
 
-  const filterName = (name: string) => setFilteredData(
-    data.filter((planet: PlanetType) => planet.name.includes(name)),
-  );
-
-  const filterNumeric: (
+  const filterNumeric = (
     column: keyof PlanetType,
     comparison: string,
-    value: number
-  ) => void = (column, comparison, value) => {
-    setFilterText(`${column} ${comparison} ${value}`);
+    value: number,
+  ) => {
     switch (comparison) {
       case 'maior que':
         setFilteredData(
@@ -43,13 +38,22 @@ function PlanetsProvider({ children }: ProviderProps) {
     }
   };
 
+  const filterName = (name: string) => setFilteredData(
+    data.filter((planet: PlanetType) => planet.name.includes(name)),
+  );
+
+  const saveFilter = (column: keyof PlanetType, comparison: string, value: number) => {
+    setFilters([...filters, { column, comparison, value }]);
+    filterNumeric(column, comparison, value);
+  };
+
   const PlanetsData = {
     data: filteredData,
     loading,
     error,
+    filters,
+    saveFilter,
     filterName,
-    filterNumeric,
-    filterText,
   };
 
   return (

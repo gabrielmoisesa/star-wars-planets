@@ -2,9 +2,13 @@ import { useContext } from 'react';
 import PlanetsContext from '../../../context/PlanetsContext';
 
 function RenderFilter() {
-  const { filterText } = useContext(PlanetsContext);
+  const { filters } = useContext(PlanetsContext);
 
-  return filterText.length > 0 && <p>{filterText}</p>;
+  return filters.length > 0 && filters.map((filter) => (
+    <p key={ filter.column }>
+      {`${filter.column} ${filter.comparison} ${filter.value}`}
+    </p>
+  ));
 }
 
 export default RenderFilter;

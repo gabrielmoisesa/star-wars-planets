@@ -42,8 +42,9 @@ export const mockContextData = {
   data: mockPlanetsData,
   loading: false,
   error: null,
+  filters: [],
+  saveFilter: () => {},
   filterName: () => {},
-  filterNumeric: () => {},
   filterText: "",
 };
 
@@ -51,7 +52,7 @@ export const mockLoadingFalse = {
   data: [],
   loading: true,
   error: null,
+  filters: [],
+  saveFilter: () => {},
   filterName: () => {},
-  filterNumeric: () => {},
-  filterText: "",
 };

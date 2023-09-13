@@ -18,17 +18,19 @@ export type ErrorType = {
   message: string;
 };
 
+export type FilterType = {
+  column: keyof PlanetType;
+  comparison: string;
+  value: number;
+};
+
 export type PlanetsContextType = {
   data: Array<PlanetType>;
   loading: boolean;
   error: null | unknown | ErrorType;
+  filters: FilterType[];
+  saveFilter: (column: keyof PlanetType, comparison: string, value: number) => void;
   filterName: (name: string) => void;
-  filterNumeric: (
-    column: keyof PlanetType,
-    comparison: string,
-    value: number
-  ) => void;
-  filterText: string;
 };
 
 export type ProviderProps = {

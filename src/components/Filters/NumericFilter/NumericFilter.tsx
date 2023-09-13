@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import PlanetsContext from '../../../context/PlanetsContext';
 
 function NumericFilter() {
-  const { filterNumeric } = useContext(PlanetsContext);
+  const { saveFilter } = useContext(PlanetsContext);
 
   const handleSubmit: (event: React.SyntheticEvent<HTMLFormElement>) => void = (
     event,
@@ -13,7 +13,7 @@ function NumericFilter() {
     const comparison = (event.target as HTMLFormElement).comparison.value;
     const value = Number((event.target as HTMLFormElement).value.value);
 
-    filterNumeric(column, comparison, value);
+    saveFilter(column, comparison, value);
   };
 
   return (
