@@ -6,6 +6,7 @@ import PlanetsContext from './PlanetsContext';
 function PlanetsProvider({ children }: ProviderProps) {
   const { data, loading, error } = useFetch('https://swapi.dev/api/planets');
   const [filteredData, setFilteredData] = useState<PlanetType[]>(data);
+  const [filterText, setFilterText] = useState('');
 
   useEffect(() => {
     setFilteredData(data);
@@ -20,6 +21,7 @@ function PlanetsProvider({ children }: ProviderProps) {
     comparison: string,
     value: number
   ) => void = (column, comparison, value) => {
+    setFilterText(`${column} ${comparison} ${value}`);
     switch (comparison) {
       case 'maior que':
         setFilteredData(
@@ -47,6 +49,7 @@ function PlanetsProvider({ children }: ProviderProps) {
     error,
     filterName,
     filterNumeric,
+    filterText,
   };
 
   return (

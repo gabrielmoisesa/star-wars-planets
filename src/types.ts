@@ -28,6 +28,7 @@ export type PlanetsContextType = {
     comparison: string,
     value: number
   ) => void;
+  filterText: string;
 };
 
 export type ProviderProps = {

@@ -44,6 +44,7 @@ export const mockContextData = {
   error: null,
   filterName: () => {},
   filterNumeric: () => {},
+  filterText: "",
 };
 
 export const mockLoadingFalse = {
@@ -52,4 +53,5 @@ export const mockLoadingFalse = {
   error: null,
   filterName: () => {},
   filterNumeric: () => {},
+  filterText: "",
 };
