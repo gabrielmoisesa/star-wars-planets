@@ -9,30 +9,30 @@ function PlanetsProvider({ children }: ProviderProps) {
   const [filters, setFilters] = useState<FilterType[]>([]);
 
   useEffect(() => {
-    setFilteredData(data);
-  }, [data]);
+    let filteredPlanets = data;
+
+    filters.forEach((filter) => {
+      filteredPlanets = filteredPlanets.filter((planet: PlanetType) => {
+        return filterNumeric(filter.column, filter.comparison, filter.value, planet);
+      });
+    });
+
+    setFilteredData(filteredPlanets);
+  }, [data, filters]);
 
   const filterNumeric = (
     column: keyof PlanetType,
     comparison: string,
     value: number,
+    planet: PlanetType,
   ) => {
     switch (comparison) {
       case 'maior que':
-        setFilteredData(
-          filteredData.filter((planet) => Number(planet[column]) > value),
-        );
-        break;
+        return Number(planet[column]) > value;
       case 'menor que':
-        setFilteredData(
-          filteredData.filter((planet) => Number(planet[column]) < value),
-        );
-        break;
+        return Number(planet[column]) < value;
       case 'igual a':
-        setFilteredData(
-          filteredData.filter((planet) => Number(planet[column]) === value),
-        );
-        break;
+        return Number(planet[column]) === value;
       default:
         throw new Error('Invalid comparison operator');
     }
@@ -44,7 +44,16 @@ function PlanetsProvider({ children }: ProviderProps) {
 
   const saveFilter = (column: keyof PlanetType, comparison: string, value: number) => {
     setFilters([...filters, { column, comparison, value }]);
-    filterNumeric(column, comparison, value);
+  };
+
+  const removeFilter = (column: keyof PlanetType) => {
+    const updatedFilters = filters.filter((filter) => filter.column !== column);
+    setFilters(updatedFilters);
+  };
+
+  const clearFilters = () => {
+    setFilters([]);
+    setFilteredData(data);
   };
 
   const PlanetsData = {
@@ -54,6 +63,8 @@ function PlanetsProvider({ children }: ProviderProps) {
     filters,
     saveFilter,
     filterName,
+    removeFilter,
+    clearFilters,
   };
 
   return (

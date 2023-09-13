@@ -32,6 +32,8 @@ export type PlanetsContextType = {
   filters: FilterType[];
   saveFilter: (column: keyof PlanetType, comparison: string, value: number) => void;
   filterName: (name: string) => void;
+  removeFilter: (column: keyof PlanetType) => void;
+  clearFilters: () => void;
 };
 
 export type ProviderProps = {
