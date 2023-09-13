@@ -12,6 +12,7 @@ export type PlanetType = {
   created: string;
   edited: string;
   url: string;
+  [key: string]: any;
 };
 
 export type ErrorType = {
