@@ -11,9 +11,9 @@ function PlanetsProvider({ children }: ProviderProps) {
     setFilteredData(data);
   }, [data]);
 
-  const filterName = (name: string) => {
-    setFilteredData(data.filter((planet: PlanetType) => planet.name.includes(name)));
-  };
+  const filterName = (name: string) => setFilteredData(
+    data.filter((planet: PlanetType) => planet.name.includes(name)),
+  );
 
   const PlanetsData = {
     data: filteredData,

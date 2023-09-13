@@ -1,8 +1,12 @@
 import NameFilter from './NameFilter/NameFilter';
+import NumericFilter from './NumericFilter/NumericFilter';
 
 function Filters() {
   return (
-    <div><NameFilter /></div>
+    <div>
+      <NameFilter />
+      <NumericFilter />
+    </div>
   );
 }
 
