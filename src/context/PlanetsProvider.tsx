@@ -15,17 +15,25 @@ function PlanetsProvider({ children }: ProviderProps) {
     data.filter((planet: PlanetType) => planet.name.includes(name)),
   );
 
-  const filterNumeric = (column: string, comparison: string, value: number) => {
+  const filterNumeric: (
+    column: keyof PlanetType,
+    comparison: string,
+    value: number
+  ) => void = (column, comparison, value) => {
     switch (comparison) {
       case 'maior que':
-        setFilteredData(filteredData.filter((planet) => planet[column] > value));
+        setFilteredData(
+          filteredData.filter((planet) => Number(planet[column]) > value),
+        );
         break;
       case 'menor que':
-        setFilteredData(filteredData.filter((planet) => planet[column] < value));
+        setFilteredData(
+          filteredData.filter((planet) => Number(planet[column]) < value),
+        );
         break;
       case 'igual a':
         setFilteredData(
-          filteredData.filter((planet) => planet[column] === String(value)),
+          filteredData.filter((planet) => Number(planet[column]) === value),
         );
         break;
       default:

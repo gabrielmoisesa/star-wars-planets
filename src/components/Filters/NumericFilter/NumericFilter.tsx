@@ -4,12 +4,14 @@ import PlanetsContext from '../../../context/PlanetsContext';
 function NumericFilter() {
   const { filterNumeric } = useContext(PlanetsContext);
 
-  const handleSubmit = (event) => {
+  const handleSubmit: (event: React.SyntheticEvent<HTMLFormElement>) => void = (
+    event,
+  ) => {
     event.preventDefault();
 
-    const column = event.target.column.value;
-    const comparison = event.target.comparison.value;
-    const value = Number(event.target.value.value);
+    const column = (event.target as HTMLFormElement).column.value;
+    const comparison = (event.target as HTMLFormElement).comparison.value;
+    const value = Number((event.target as HTMLFormElement).value.value);
 
     filterNumeric(column, comparison, value);
   };
