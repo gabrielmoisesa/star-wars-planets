@@ -23,7 +23,6 @@ function Table() {
   ];
 
   const planetKeys = tableHeaders.map((header) => header.toLowerCase().replace(/\s+/g, '_'));
-  console.log(planetKeys);
 
   return (
     <table>
