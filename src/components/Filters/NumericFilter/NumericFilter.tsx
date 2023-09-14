@@ -1,16 +1,16 @@
 import { useContext } from 'react';
 import PlanetsContext from '../../../context/PlanetsContext';
 
+export const columns = [
+  'population',
+  'orbital_period',
+  'diameter',
+  'rotation_period',
+  'surface_water',
+];
+
 function NumericFilter() {
   const { saveFilter, filters } = useContext(PlanetsContext);
-
-  const columns = [
-    'population',
-    'orbital_period',
-    'diameter',
-    'rotation_period',
-    'surface_water',
-  ];
 
   const filteredColumns = columns.filter(
     (column) => !filters.some((filter) => filter.column === column),
