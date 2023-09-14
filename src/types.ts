@@ -34,8 +34,11 @@ export type PlanetsContextType = {
   filterName: (name: string) => void;
   removeFilter: (column: keyof PlanetType) => void;
   clearFilters: () => void;
+  sortPlanets: (column: string, sortOrder: 'ASC' | 'DESC') => void;
 };
 
 export type ProviderProps = {
   children: React.ReactNode;
 };
+
+export type SortType = 'ASC' | 'DESC';

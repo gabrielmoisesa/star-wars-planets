@@ -28,15 +28,29 @@ function Table() {
     <table>
       <thead>
         <tr>
-          {tableHeaders.map((header) => <th key={ header }>{header}</th>)}
+          {tableHeaders.map((header) => (
+            <th key={ header }>{header}</th>
+          ))}
         </tr>
       </thead>
       <tbody>
-        {loading ? <tr><td>Loading...</td></tr> : data.map((planet: PlanetType) => (
-          <tr key={ planet.name }>
-            {planetKeys.map((key) => <td key={ key }>{planet[key]}</td>)}
+        {loading ? (
+          <tr>
+            <td>Loading...</td>
           </tr>
-        ))}
+        ) : (
+          data.map((planet: PlanetType) => (
+            <tr key={ planet.name }>
+              {planetKeys.map((key) => (key === 'name' ? (
+                <td key={ key } data-testid="planet-name">
+                  {planet[key]}
+                </td>
+              ) : (
+                <td key={ key }>{planet[key]}</td>
+              )))}
+            </tr>
+          ))
+        )}
       </tbody>
     </table>
   );

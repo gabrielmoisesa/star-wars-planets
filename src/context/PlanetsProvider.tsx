@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { FilterType, PlanetType, ProviderProps } from '../types';
+import { FilterType, PlanetType, ProviderProps, SortType } from '../types';
 import useFetch from '../hooks/useFetch';
 import PlanetsContext from './PlanetsContext';
 
@@ -56,6 +56,24 @@ function PlanetsProvider({ children }: ProviderProps) {
     setFilteredData(data);
   };
 
+  const sortPlanets = (column: string, sortOrder: SortType) => {
+    setFilteredData((prevData) => {
+      const numSort = sortOrder === 'ASC' ? 1 : -1;
+
+      return [...prevData].sort((a, b) => {
+        const valueA = a[column] === 'unknown'
+          ? Number.MAX_SAFE_INTEGER * numSort
+          : parseFloat(a[column]);
+        const valueB = b[column] === 'unknown'
+          ? Number.MAX_SAFE_INTEGER * numSort
+          : parseFloat(b[column]);
+
+        if (valueA === valueB) return 0;
+        return valueA < valueB ? -numSort : numSort;
+      });
+    });
+  };
+
   const PlanetsData = {
     data: filteredData,
     loading,
@@ -65,6 +83,7 @@ function PlanetsProvider({ children }: ProviderProps) {
     filterName,
     removeFilter,
     clearFilters,
+    sortPlanets,
   };
 
   return (
