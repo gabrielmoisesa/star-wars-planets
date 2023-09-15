@@ -1,3 +1,15 @@
-body {
-  text-align: center;
+.App {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-content {
+  align-items: center;
+  border: 1px solid var(--white);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

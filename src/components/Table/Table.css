@@ -1,20 +1,21 @@
 table {
   border-collapse: collapse;
+  margin-top: 2rem;
+}
+
+table, th, td {
+  max-width: 7vw;
+  min-width: 90%;
+  padding: 0.2rem;
 }
 
 th {
   border-bottom: 1px solid;
 }
 
-table, th, td {
-  padding: 0.2rem;
-}
-
 td {
   border-bottom: 1px solid;
-  font-size: 0.9rem;
-  max-width: 8rem;
+  font-size: 0.8rem;
   text-align: center;
   word-wrap: break-word;
 }
-

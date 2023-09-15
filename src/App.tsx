@@ -5,11 +5,14 @@ import Table from './components/Table/Table';
 
 function App() {
   return (
-    <>
-      <Sort />
-      <Filters />
-      <Table />
-    </>
+    <div className="App">
+      <h1>STARWARS</h1>
+      <main className="main-content">
+        <Filters />
+        <Sort />
+        <Table />
+      </main>
+    </div>
   );
 }
 
