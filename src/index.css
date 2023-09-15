@@ -12,6 +12,7 @@
 }
 
 body {
+  margin: 0;
   background-color: var(--dark);
   color: var(--white);
   background-image: url('./assets/images/starwars-desktop-bg.png');
