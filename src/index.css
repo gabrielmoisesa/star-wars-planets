@@ -14,6 +14,9 @@
 body {
   background-color: var(--dark);
   color: var(--white);
+  background-image: url('./assets/images/starwars-desktop-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
