@@ -1,13 +1,13 @@
 import { render, screen } from '@testing-library/react';
 import App from '../App';
 import PlanetsContext from '../context/PlanetsContext';
-import { mockContextData, mockLoadingFalse, mockPlanetsData } from './mocks';
+import { mockContextData, mockLoadingTrue, mockPlanetsData } from './mocks';
 
 
 describe("Testa o componente <Table />", () => {
   test("Renderiza loading se loading estiver true", () => {
     render(
-      <PlanetsContext.Provider value={mockLoadingFalse}>
+      <PlanetsContext.Provider value={mockLoadingTrue}>
         <App />
       </PlanetsContext.Provider>
     );
@@ -28,4 +28,3 @@ describe("Testa o componente <Table />", () => {
     });
   });
 });
-

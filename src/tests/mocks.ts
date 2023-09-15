@@ -45,14 +45,12 @@ export const mockContextData = {
   filters: [],
   saveFilter: () => {},
   filterName: () => {},
-  filterText: "",
+  removeFilter: () => {},
+  clearFilters: () => {},
+  sortPlanets: () => {},
 };
 
-export const mockLoadingFalse = {
-  data: [],
+export const mockLoadingTrue = {
+  ...mockContextData,
   loading: true,
-  error: null,
-  filters: [],
-  saveFilter: () => {},
-  filterName: () => {},
 };
