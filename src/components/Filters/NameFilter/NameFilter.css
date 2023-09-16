@@ -1,0 +1,17 @@
+.name-filter-container {
+  align-items: center;
+  display: flex;
+  margin-top: 3rem;
+  position: relative;
+  width: 41rem;
+}
+
+.name-filter {
+  flex-grow: 1;
+  padding-right: 30px;
+}
+
+.search-icon {
+  position: absolute;
+  right: 1rem;
+}
