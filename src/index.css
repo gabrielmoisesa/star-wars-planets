@@ -3,7 +3,7 @@
 :root {
   --dark: #25262B;
   --gray: #373A40;
-  --yellow: #FCC419;
+  --yellow: #FAE60A;
   --white: #FFFFFF;
 }
 
@@ -25,4 +25,79 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+input {
+  border-radius: 5px;
+  border: 1px solid var(--white);
+  height: 42px;
+  color: var(--white);
+  background: none;
+  transition: 0.25s;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid var(--white);
+  color: var(--yellow);
+}
+
+button {
+  background: none;
+  border: 1px solid var(--yellow);
+  border-radius: 5px;
+  color: var(--yellow);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background: var(--yellow);
+  color: var(--dark);
+}
+
+select {
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--white);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+option {
+  background: var(--dark);
+  color: var(--white);
+}
+
+input[type="radio"] {
+	appearance: none;
+	-webkit-appearance: none;
+	width: 20px;
+	height: 20px;
+	border: 1px solid var(--white);
+	border-radius: 50%;
+	margin-right: 10px;
+	background-color: transparent;
+	position: relative;
+	top: 6px;
+  transition: all 0.3s ease;
+}
+
+input[type="radio"]:checked {
+  border: 1px solid var(--yellow);
+}
+
+input[type="radio"]:checked::before {
+	content: "";
+	display: block;
+	width: 12px;
+	height: 12px;
+	background-color: var(--yellow);
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
 }
