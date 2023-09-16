@@ -49,11 +49,13 @@ button {
   color: var(--yellow);
   cursor: pointer;
   font-size: 14px;
+  transition: 0.25s;
 }
 
 button:hover {
   background: var(--yellow);
   color: var(--dark);
+  opacity: 0.8;
 }
 
 select {
