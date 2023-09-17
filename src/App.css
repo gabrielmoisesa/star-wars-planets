@@ -22,11 +22,11 @@
   flex-flow: wrap;
   flex-direction: row;
   justify-content: center;
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 
 .table-container {
-  height: 50vh;
+  height: 60vh;
   overflow-y: scroll;
   width: 100%;
 }
