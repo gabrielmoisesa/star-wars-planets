@@ -1,6 +1,8 @@
 .sort-form {
   align-items: center;
   display: flex;
+  flex-flow: wrap;
+  justify-content: center;
 }
 
 .sort-form label {

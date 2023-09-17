@@ -1,9 +1,10 @@
 .name-filter-container {
   align-items: center;
   display: flex;
+  justify-content: center;
   margin-top: 3rem;
   position: relative;
-  width: 41rem;
+  width: 45vw;
 }
 
 .name-filter {
@@ -12,6 +13,6 @@
 }
 
 .search-icon {
-  position: absolute;
-  right: 1rem;
+  position: relative;
+  right: 2.25rem;
 }
