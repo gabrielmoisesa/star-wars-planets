@@ -50,12 +50,17 @@ button {
   cursor: pointer;
   font-size: 14px;
   transition: 0.25s;
+  font-weight: 700;
 }
 
 button:hover {
   background: var(--yellow);
   color: var(--dark);
   opacity: 0.8;
+}
+
+label select {
+  display: flex;
 }
 
 select {
@@ -65,6 +70,8 @@ select {
   color: var(--white);
   font-weight: 700;
   font-size: 14px;
+  width: 8.3rem;
+  margin-top: 0.3rem;
 }
 
 option {

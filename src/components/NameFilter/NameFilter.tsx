@@ -1,7 +1,7 @@
 import { useContext } from 'react';
-import PlanetsContext from '../../../context/PlanetsContext';
+import PlanetsContext from '../../context/PlanetsContext';
 import './NameFilter.css';
-import searchIcon from '../../../assets/svgs/search-icon.svg';
+import searchIcon from '../../assets/svgs/search-icon.svg';
 
 function NameFilter() {
   const { filterName } = useContext(PlanetsContext);

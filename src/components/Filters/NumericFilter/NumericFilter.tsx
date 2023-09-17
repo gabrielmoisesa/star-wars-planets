@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import PlanetsContext from '../../../context/PlanetsContext';
+import './NumericFilter.css';
 
 export const columns = [
   'population',
@@ -31,7 +32,7 @@ function NumericFilter() {
   };
 
   return (
-    <form onSubmit={ handleSubmit }>
+    <form onSubmit={ handleSubmit } className="numeric-filter-form">
       <label>
         Column
         <select name="column" data-testid="column-filter">

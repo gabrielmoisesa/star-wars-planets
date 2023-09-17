@@ -1,13 +1,10 @@
-import ButtonClearFilters from './ButtonClearFilters/ButtonRemoveFilters';
-import NameFilter from './NameFilter/NameFilter';
+import ButtonClearFilters from './ButtonClearFilters/ButtonClearFilters';
 import NumericFilter from './NumericFilter/NumericFilter';
 import RenderFilter from './RenderFilterText/RenderFilterText';
-import './Filters.css';
 
 function Filters() {
   return (
-    <div className="filters-container">
-      <NameFilter />
+    <div>
       <NumericFilter />
       <ButtonClearFilters />
       <RenderFilter />

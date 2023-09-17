@@ -1,0 +1,19 @@
+.numeric-filter-form {
+  align-items: center;
+  display: flex;
+}
+
+.numeric-filter-form label {
+  margin-right: 3rem;
+}
+
+.numeric-filter-form input {
+  margin-right: 3rem;
+  width: 5.6rem;
+}
+
+.numeric-filter-form button {
+  height: 5.3rem;
+  margin-right: 3rem;
+  width: 5.6rem;
+}

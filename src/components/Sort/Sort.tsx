@@ -2,6 +2,7 @@ import { useContext, useState } from 'react';
 import { columns } from '../Filters/NumericFilter/NumericFilter';
 import PlanetsContext from '../../context/PlanetsContext';
 import { SortType } from '../../types';
+import './Sort.css';
 
 function Sort() {
   const { sortPlanets } = useContext(PlanetsContext);
@@ -23,7 +24,7 @@ function Sort() {
   };
 
   return (
-    <form onSubmit={ handleSubmit }>
+    <form onSubmit={ handleSubmit } className="sort-form">
       <label>
         Ordenar
         <select
@@ -38,26 +39,28 @@ function Sort() {
           ))}
         </select>
       </label>
-      <label>
-        <input
-          type="radio"
-          value="ASC"
-          data-testid="column-sort-input-asc"
-          onChange={ handleSortOrderChange }
-          checked={ selectedSortOrder === 'ASC' }
-        />
-        Ascendente
-      </label>
-      <label>
-        <input
-          type="radio"
-          value="DESC"
-          data-testid="column-sort-input-desc"
-          onChange={ handleSortOrderChange }
-          checked={ selectedSortOrder === 'DESC' }
-        />
-        Descendente
-      </label>
+      <div className="sort-radios-container">
+        <label className="asc-radio-label">
+          <input
+            type="radio"
+            value="ASC"
+            data-testid="column-sort-input-asc"
+            onChange={ handleSortOrderChange }
+            checked={ selectedSortOrder === 'ASC' }
+          />
+          Ascendente
+        </label>
+        <label>
+          <input
+            type="radio"
+            value="DESC"
+            data-testid="column-sort-input-desc"
+            onChange={ handleSortOrderChange }
+            checked={ selectedSortOrder === 'DESC' }
+          />
+          Descendente
+        </label>
+      </div>
       <button type="submit" data-testid="column-sort-button">
         Sort
       </button>

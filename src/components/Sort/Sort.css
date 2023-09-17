@@ -1,0 +1,22 @@
+.sort-form {
+  align-items: center;
+  display: flex;
+}
+
+.sort-form label {
+  margin-right: 3rem;
+}
+
+.sort-radios-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.asc-radio-label {
+  margin-bottom: 1rem;
+}
+
+.sort-form button {
+  height: 5.3rem;
+  width: 5.6rem;
+}

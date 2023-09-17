@@ -1,6 +1,7 @@
 import './App.css';
 import Filters from './components/Filters/Filters';
 import Header from './components/Header/Header';
+import NameFilter from './components/NameFilter/NameFilter';
 import Sort from './components/Sort/Sort';
 import Table from './components/Table/Table';
 
@@ -9,8 +10,11 @@ function App() {
     <div className="App">
       <Header />
       <main className="main-content">
-        <Filters />
-        <Sort />
+        <NameFilter />
+        <div className="filters-group">
+          <Filters />
+          <Sort />
+        </div>
         <Table />
       </main>
     </div>
