@@ -12,11 +12,21 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 3rem;
+  width: 90vw;
 }
 
 .filters-group {
   align-items: center;
   display: flex;
+  flex-flow: wrap;
   flex-direction: row;
+  justify-content: center;
   margin-top: 3rem;
+}
+
+.table-container {
+  max-height: 50vh;
+  overflow-y: scroll;
+  width: 100%;
 }

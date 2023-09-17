@@ -15,7 +15,9 @@ function App() {
           <Filters />
           <Sort />
         </div>
-        <Table />
+        <div className="table-container">
+          <Table />
+        </div>
       </main>
     </div>
   );
