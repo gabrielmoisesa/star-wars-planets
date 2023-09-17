@@ -125,3 +125,13 @@ input[type="radio"]:checked::before {
 	transform: translate(-50%, -50%);
   transition: all 0.3s ease;
 }
+
+a {
+  color: var(--white);
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+a:hover {
+  color: var(--yellow);
+}

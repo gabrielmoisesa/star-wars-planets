@@ -39,6 +39,12 @@ function Table() {
             {`https://swapi.dev/api/films/1-${planet[key].length}/`}
           </td>
         );
+      case 'url':
+        return (
+          <td key={ key }>
+            <a href={ planet[key] } target="_blank" rel="noreferrer">{planet[key]}</a>
+          </td>
+        );
       default:
         return (
           <td key={ key }>{planet[key]}</td>
