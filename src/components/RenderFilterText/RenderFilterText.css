@@ -1,0 +1,10 @@
+.render-filters-container {
+  align-items: center;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.render-filters-container button {
+  font-weight: 400;
+}

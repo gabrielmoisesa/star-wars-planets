@@ -2,6 +2,7 @@ import './App.css';
 import Filters from './components/Filters/Filters';
 import Header from './components/Header/Header';
 import NameFilter from './components/NameFilter/NameFilter';
+import RenderFilter from './components/RenderFilterText/RenderFilterText';
 import Sort from './components/Sort/Sort';
 import Table from './components/Table/Table';
 
@@ -15,6 +16,7 @@ function App() {
           <Filters />
           <Sort />
         </div>
+        <RenderFilter />
         <div className="table-container">
           <Table />
         </div>

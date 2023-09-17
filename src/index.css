@@ -3,7 +3,7 @@
 :root {
   --dark: #25262B;
   --gray: #2E3035;
-  --yellow: #FAE60A;
+  --green: #0afa32;
   --white: #FFFFFF;
 }
 
@@ -15,7 +15,8 @@ body {
   margin: 0;
   background-color: var(--dark);
   color: var(--white);
-  background-image: url('./assets/images/starwars-desktop-bg.png');
+  background-image: url('./assets/images/starwars-planet-bg.jpg');
+  backdrop-filter: blur(4px);
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-font-smoothing: antialiased;
@@ -54,14 +55,14 @@ input {
 input:focus {
   outline: none;
   border: 1px solid var(--white);
-  color: var(--yellow);
+  color: var(--green);
 }
 
 button {
   background: none;
-  border: 1px solid var(--yellow);
+  border: 1px solid var(--green);
   border-radius: 5px;
-  color: var(--yellow);
+  color: var(--green);
   cursor: pointer;
   font-size: 14px;
   transition: 0.25s;
@@ -69,7 +70,7 @@ button {
 }
 
 button:hover {
-  background: var(--yellow);
+  background: var(--green);
   color: var(--dark);
   opacity: 0.8;
 }
@@ -109,7 +110,7 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked {
-  border: 1px solid var(--yellow);
+  border: 1px solid var(--green);
 }
 
 input[type="radio"]:checked::before {
@@ -117,7 +118,7 @@ input[type="radio"]:checked::before {
 	display: block;
 	width: 12px;
 	height: 12px;
-	background-color: var(--yellow);
+	background-color: var(--green);
 	border-radius: 50%;
 	position: absolute;
 	top: 50%;
@@ -133,5 +134,5 @@ a {
 }
 
 a:hover {
-  color: var(--yellow);
+  color: var(--green);
 }
