@@ -112,6 +112,7 @@ input[type="radio"] {
 
 input[type="radio"]:checked {
   border: 1px solid var(--green);
+  box-shadow: 0 0 8px #0afa3283;
 }
 
 input[type="radio"]:checked::before {
