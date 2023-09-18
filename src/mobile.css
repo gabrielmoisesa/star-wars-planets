@@ -21,7 +21,22 @@
 
   }
 
+  /* Main content */
   .name-filter-container {
     margin-left: 1rem;
+  }
+
+  .filters-group {
+    gap: 5rem;
+  }
+
+  .numeric-filter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    > label, input, button {
+      margin-left: 3rem;
+    }
   }
 }
