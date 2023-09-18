@@ -50,6 +50,7 @@ input {
   color: var(--white);
   background: none;
   transition: 0.25s;
+  padding-left: 0.5rem;
 }
 
 input:focus {
@@ -89,6 +90,10 @@ select {
   font-size: 14px;
   width: 8.3rem;
   margin-top: 0.3rem;
+}
+
+select:focus-visible {
+  outline: none;
 }
 
 option {
