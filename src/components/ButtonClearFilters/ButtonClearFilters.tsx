@@ -12,7 +12,7 @@ function ButtonClearFilters() {
         data-testid="button-remove-filters"
         className="button-clear-filters"
       >
-        Remover filtros
+        Remove filters
       </button>
     )
   );

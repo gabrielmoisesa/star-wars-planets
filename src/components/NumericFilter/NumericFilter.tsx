@@ -46,9 +46,9 @@ function NumericFilter() {
       <label>
         Operator
         <select name="comparison" data-testid="comparison-filter">
-          <option value="maior que">greater than</option>
-          <option value="menor que">less than</option>
-          <option value="igual a">equal to</option>
+          <option value="greater than">greater than</option>
+          <option value="less than">less than</option>
+          <option value="equal to">equal to</option>
         </select>
       </label>
       <input

@@ -48,7 +48,7 @@ function Sort() {
             onChange={ handleSortOrderChange }
             checked={ selectedSortOrder === 'ASC' }
           />
-          Ascendente
+          Ascending
         </label>
         <label>
           <input
@@ -58,7 +58,7 @@ function Sort() {
             onChange={ handleSortOrderChange }
             checked={ selectedSortOrder === 'DESC' }
           />
-          Descendente
+          Descending
         </label>
       </div>
       <button type="submit" data-testid="column-sort-button">
