@@ -1,13 +1,5 @@
 @media only screen and ( max-width : 768px ) {
 
-  input {
-    font-size: 0.9rem;
-  }
-
-  label, select, button {
-    font-size: 1.1rem;
-  }
-
   header {
 
     .ellipse1 {
@@ -31,6 +23,14 @@
 
   .main-content {
     margin-bottom: 1.5rem ! important;
+  }
+
+  input {
+    font-size: 0.9rem;
+  }
+
+  label, select, button {
+    font-size: 1.1rem;
   }
 
   .name-filter-container {
@@ -57,5 +57,14 @@
     > label, input {
       margin-left: 3rem;
     }
+  }
+
+  th {
+    height: 4rem ! important;
+    min-width: 6.55rem ! important;
+  }
+
+  .table-container {
+    height: 69vh ! important;
   }
 }
