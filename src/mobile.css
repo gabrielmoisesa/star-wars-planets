@@ -3,20 +3,25 @@
   header {
 
     .ellipse1 {
-      width: 27rem;
+      width: 31rem;
     }
 
     .ellipse2 {
-      width: 19rem;
+      width: 22.1rem;
     }
 
     .starwars-logo {
-      width: 16rem;
+      width: 19rem;
     }
 
     .line1 {
-      height: 11.2rem;
+      height: 11.5rem;
       position: absolute;
     }
+
+  }
+
+  .name-filter-container {
+    margin-left: 1rem;
   }
 }
