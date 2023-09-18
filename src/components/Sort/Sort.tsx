@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react';
-import { columns } from '../Filters/NumericFilter/NumericFilter';
+import { columns } from '../NumericFilter/NumericFilter';
 import PlanetsContext from '../../context/PlanetsContext';
 import { SortType } from '../../types';
 import './Sort.css';

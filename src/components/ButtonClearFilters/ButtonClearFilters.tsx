@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import PlanetsContext from '../../../context/PlanetsContext';
+import PlanetsContext from '../../context/PlanetsContext';
 import './ButtonClearFilters.css';
 
 function ButtonClearFilters() {

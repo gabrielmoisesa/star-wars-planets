@@ -1,7 +1,8 @@
 import './App.css';
-import Filters from './components/Filters/Filters';
+import ButtonClearFilters from './components/ButtonClearFilters/ButtonClearFilters';
 import Header from './components/Header/Header';
 import NameFilter from './components/NameFilter/NameFilter';
+import NumericFilter from './components/NumericFilter/NumericFilter';
 import RenderFilter from './components/RenderFilterText/RenderFilterText';
 import Sort from './components/Sort/Sort';
 import Table from './components/Table/Table';
@@ -13,9 +14,10 @@ function App() {
       <main className="main-content">
         <NameFilter />
         <div className="filters-group">
-          <Filters />
+          <NumericFilter />
           <Sort />
         </div>
+        <ButtonClearFilters />
         <RenderFilter />
         <div className="table-container">
           <Table />
