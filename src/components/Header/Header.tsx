@@ -8,12 +8,12 @@ function Header() {
   return (
     <header>
       <div className="ellipse-container">
-        <img src={ ellipse1 } alt="Yellow Circle" />
+        <img src={ ellipse1 } alt="Yellow Circle" className="ellipse1" />
         <div className="ellipse2-container">
-          <img src={ ellipse2 } alt="White Circle" />
+          <img src={ ellipse2 } alt="White Circle" className="ellipse2" />
           <img className="starwars-logo" src={ starwarsLogo } alt="Star Wars Logo" />
         </div>
-        <img className="line1" src={ line1 } alt="" />
+        <img className="line1" src={ line1 } alt="White line" />
       </div>
     </header>
   );
