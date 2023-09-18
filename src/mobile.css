@@ -1,5 +1,13 @@
 @media only screen and ( max-width : 768px ) {
 
+  input {
+    font-size: 0.9rem;
+  }
+
+  label, select, button {
+    font-size: 1.1rem;
+  }
+
   header {
 
     .ellipse1 {
@@ -21,6 +29,10 @@
 
   }
 
+  .main-content {
+    margin-bottom: 1.5rem ! important;
+  }
+
   .name-filter-container {
     margin-left: 1rem;
   }
@@ -31,7 +43,7 @@
 
   .numeric-filter-form {
     flex-direction: column;
-    gap: 5rem;
+    gap: 4rem;
 
     > label, input, button {
       margin-left: 3rem;
@@ -40,7 +52,7 @@
 
   .sort-form {
     flex-flow: column ! important;
-    gap: 5rem;
+    gap: 4rem;
 
     > label, input {
       margin-left: 3rem;
