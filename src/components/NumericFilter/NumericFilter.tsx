@@ -51,8 +51,19 @@ function NumericFilter() {
           <option value="igual a">igual a</option>
         </select>
       </label>
-      <input type="number" name="value" defaultValue={ 0 } data-testid="value-filter" />
-      <button type="submit" data-testid="button-filter">Filtrar</button>
+      <input
+        type="number"
+        name="value"
+        defaultValue={ 0 }
+        data-testid="value-filter"
+      />
+      <button
+        type="submit"
+        data-testid="button-filter"
+        disabled={ filteredColumns.length === 0 }
+      >
+        Filtrar
+      </button>
     </form>
   );
 }

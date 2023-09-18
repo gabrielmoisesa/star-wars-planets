@@ -1,5 +1,6 @@
 import './App.css';
 import ButtonClearFilters from './components/ButtonClearFilters/ButtonClearFilters';
+import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import NameFilter from './components/NameFilter/NameFilter';
 import NumericFilter from './components/NumericFilter/NumericFilter';
@@ -23,6 +24,7 @@ function App() {
           <Table />
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

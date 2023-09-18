@@ -77,6 +77,14 @@ button:hover {
   box-shadow: inset 0 0 10px rgba(27, 253, 84, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
 }
 
+button:disabled {
+  color: gray;
+  border: 2px solid gray;
+  box-shadow: none;
+  background: none;
+  cursor: not-allowed;
+}
+
 label select {
   display: flex;
 }
