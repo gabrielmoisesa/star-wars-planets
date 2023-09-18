@@ -1,20 +1,35 @@
 table {
   border-collapse: collapse;
-}
-
-th {
-  border-bottom: 1px solid;
+  margin-top: 5rem;
+  overflow-x: scroll;
+  width: 100%;
 }
 
 table, th, td {
   padding: 0.2rem;
 }
 
+th {
+  background-color: var(--gray);
+  border: 1px solid black;
+  font-size: 14px;
+  height: 4.3rem;
+  min-width: 8.8rem;
+}
+
 td {
-  border-bottom: 1px solid;
-  font-size: 0.9rem;
-  max-width: 8rem;
+  border-top: 1px solid;
+  font-size: 14px;
+  padding: 3rem 1rem;
   text-align: center;
-  word-wrap: break-word;
+}
+
+.films-th {
+  min-width: 22.25rem;
+  padding-left: 0;
+}
+
+.films-td {
+  padding-left: 0;
 }
 

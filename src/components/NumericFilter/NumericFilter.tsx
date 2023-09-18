@@ -1,5 +1,6 @@
 import { useContext } from 'react';
-import PlanetsContext from '../../../context/PlanetsContext';
+import PlanetsContext from '../../context/PlanetsContext';
+import './NumericFilter.css';
 
 export const columns = [
   'population',
@@ -31,7 +32,7 @@ function NumericFilter() {
   };
 
   return (
-    <form onSubmit={ handleSubmit }>
+    <form onSubmit={ handleSubmit } className="numeric-filter-form">
       <label>
         Column
         <select name="column" data-testid="column-filter">
@@ -45,13 +46,24 @@ function NumericFilter() {
       <label>
         Operator
         <select name="comparison" data-testid="comparison-filter">
-          <option value="maior que">maior que</option>
-          <option value="menor que">menor que</option>
-          <option value="igual a">igual a</option>
+          <option value="greater than">greater than</option>
+          <option value="less than">less than</option>
+          <option value="equal to">equal to</option>
         </select>
       </label>
-      <input type="number" name="value" defaultValue={ 0 } data-testid="value-filter" />
-      <button type="submit" data-testid="button-filter">Filtrar</button>
+      <input
+        type="number"
+        name="value"
+        defaultValue={ 0 }
+        data-testid="value-filter"
+      />
+      <button
+        type="submit"
+        data-testid="button-filter"
+        disabled={ filteredColumns.length === 0 }
+      >
+        Filter
+      </button>
     </form>
   );
 }

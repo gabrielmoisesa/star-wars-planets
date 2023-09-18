@@ -27,11 +27,11 @@ function PlanetsProvider({ children }: ProviderProps) {
     planet: PlanetType,
   ) => {
     switch (comparison) {
-      case 'maior que':
+      case 'greater than':
         return Number(planet[column]) > value;
-      case 'menor que':
+      case 'less than':
         return Number(planet[column]) < value;
-      case 'igual a':
+      case 'equal to':
         return Number(planet[column]) === value;
       default:
         throw new Error('Invalid comparison operator');

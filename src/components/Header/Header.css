@@ -1,0 +1,30 @@
+header {
+  margin-bottom: 8.6rem;
+
+  .ellipse-container {
+    height: auto;
+    position: relative;
+    width: 100%;
+  }
+
+  .ellipse2-container {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .starwars-logo {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  .line1 {
+    left: 50%;
+    position: absolute;
+    top: 89.7%;
+  }
+}
