@@ -26,7 +26,7 @@ function Sort() {
   return (
     <form onSubmit={ handleSubmit } className="sort-form">
       <label>
-        Ordenar
+        Sort by
         <select
           data-testid="column-sort"
           onChange={ handleColumnChange }

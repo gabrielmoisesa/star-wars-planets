@@ -46,9 +46,9 @@ function NumericFilter() {
       <label>
         Operator
         <select name="comparison" data-testid="comparison-filter">
-          <option value="maior que">maior que</option>
-          <option value="menor que">menor que</option>
-          <option value="igual a">igual a</option>
+          <option value="maior que">greater than</option>
+          <option value="menor que">less than</option>
+          <option value="igual a">equal to</option>
         </select>
       </label>
       <input
@@ -62,7 +62,7 @@ function NumericFilter() {
         data-testid="button-filter"
         disabled={ filteredColumns.length === 0 }
       >
-        Filtrar
+        Filter
       </button>
     </form>
   );
