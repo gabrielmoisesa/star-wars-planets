@@ -1,4 +1,4 @@
-@media screen and ( max-width : 768px ) {
+@media only screen and ( max-width : 768px ) {
 
   header {
 
@@ -21,7 +21,6 @@
 
   }
 
-  /* Main content */
   .name-filter-container {
     margin-left: 1rem;
   }
@@ -31,11 +30,19 @@
   }
 
   .numeric-filter-form {
-    display: flex;
     flex-direction: column;
     gap: 5rem;
 
     > label, input, button {
+      margin-left: 3rem;
+    }
+  }
+
+  .sort-form {
+    flex-flow: column ! important;
+    gap: 5rem;
+
+    > label, input {
       margin-left: 3rem;
     }
   }
